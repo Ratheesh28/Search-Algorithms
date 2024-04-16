@@ -19,30 +19,72 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
-
-
-
+a=eval(input())
+b=int(input())
+a.sort()
+print(a)
+def linsc(a,b):
+    k=0
+    for i in a:
+        if(b==i):
+           return 1,k
+        else:
+           k+=1
+    return -1,k
+d,k=linsc(a,b)
+if(d==1):
+    print("Element found at index: ",k)
+else:
+    print("Element not found")
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-
-
-
-
-
+lst=eval(input())
+n=int(input())
+lst.sort()
+low=0
+high=len(lst)-1
+print(lst)
+def binsc(lst,n,low,high):
+    while(low<=high):
+        mid=low+(high-low)//2
+        if(lst[mid]==n):
+            return 1,mid
+        elif(n>lst[mid]):
+            low=mid+1
+        else:
+            high=mid-1
+    return -1,mid
+d,mid=binsc(lst,n,low,high)
+if(d==1):
+    print("Element found at index: ",mid)
+else:
+    print("Element not found")
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
-
-
-
-
+a=eval(input())
+b=int(input())
+a.sort()
+print(a)
+def linsc(a,b):
+    k=0
+    for i in a:
+        if(b==i):
+           return 1,k
+        else:
+           k+=1
+    return -1,k
+d,k=linsc(a,b)
+if(d==1):
+    print("Element found at index: ",k)
+else:
+    print("Element not found")
 ```
-## Sample Input and Output
-
-
-
+## Sample input and Output
+![alt text](<WhatsApp Image 2024-04-16 at 23.29.08_96df4d90.jpg>)
+![alt text](<WhatsApp Image 2024-04-16 at 23.30.17_b8a369c6.jpg>)
+![alt text](<WhatsApp Image 2024-04-16 at 23.30.40_9cc42571.jpg>)
 
 
 
